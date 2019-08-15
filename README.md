@@ -17,9 +17,21 @@
 
 #### 使用说明
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. #### 第一步
+
+2. 	allprojects {
+   		repositories {
+   			...
+   			maven { url 'https://www.jitpack.io' }
+   		}
+   	}
+
+3. #### 第二步
+
+4. 	dependencies {
+   	        implementation 'com.github.icescj:kotlin_framework:0.0.1'
+   	}
+   
 
 #### 参与贡献
 
