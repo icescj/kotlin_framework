@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.sinoyd.frameapplication"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation 'org.jetbrains.anko:anko-sdk15:0.9.1'
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
+    implementation 'org.xutils:xutils:3.5.0'
+    //导入RxJava 和 RxAndroid
+    implementation 'io.reactivex:rxandroid:1.2.0'
+    implementation 'io.reactivex:rxjava:1.1.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    //导入retrofit
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    //转换器，请求结果转换成Model
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    //配合Rxjava 使用
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+//    implementation 'com.orhanobut:logger:1.15'
+    //开源日志库
+    implementation 'com.blankj:utilcode:1.17.1'
+    implementation files('libs/face.jar')
+
+    implementation files('libs/mina-core-2.0.16.jar')
+    implementation files('libs/slf4j-api-1.7.21.jar')
+    implementation files('libs/slf4j-log4j12-1.7.21.jar')
+    implementation files('libs/log4j-1.2.17.jar')
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    /*添加依赖*/
+    implementation 'com.github.yuzhiqiang1993:zxing:2.1.4'
+
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+}

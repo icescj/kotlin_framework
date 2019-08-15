@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sinoyd.frameapplication.KotlinFrame.UI.TwodimensionallistActivity">
+
+    <com.example.sinoyd.frameapplication.KotlinFrame.View.Twodimensionallistview
+        android:id="@+id/twodimensionallistview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"></com.example.sinoyd.frameapplication.KotlinFrame.View.Twodimensionallistview>
+
+    <TextView
+        android:id="@+id/tvusage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:textSize="10dp" />
+</LinearLayout>

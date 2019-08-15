@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/frame_date_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <DatePicker
+            android:id="@+id/dater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TimePicker
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_Confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/frame_date_bg_color"
+            android:gravity="center"
+            android:text="确定"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btn_Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/frame_date_bg_color"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+</LinearLayout>

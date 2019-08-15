@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="5dp">
+
+
+    <RadioGroup
+        android:id="@+id/rg_pointchoose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_bt1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/frame_selector_tab_bg_color_rgleft"
+            android:button="@null"
+            android:gravity="center"
+            android:text="类型"
+            android:textColor="#000" />
+
+        <RadioButton
+            android:id="@+id/rb_bt2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/frame_selector_tab_bg_color_rgright"
+            android:button="@null"
+            android:gravity="center"
+            android:text="区域"
+            android:textColor="#000" />
+
+    </RadioGroup>
+
+
+</RelativeLayout>

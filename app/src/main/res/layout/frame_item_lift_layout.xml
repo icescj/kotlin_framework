@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/liftname"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/liftname2"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="10dp" />
+
+</LinearLayout>

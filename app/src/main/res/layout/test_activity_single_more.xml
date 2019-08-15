@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sinoyd.frameapplication.KotlinFrame.UI.SingleMoreActivity">
+
+    <TextView
+        android:textSize="8dp"
+        android:id="@+id/tvsingle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="单选框" />
+
+    <GridView
+        android:id="@+id/gvsingle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:horizontalSpacing="5dp"
+        android:numColumns="2"></GridView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/bt1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="选中" />
+
+        <Button
+            android:id="@+id/bt11"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="重置" />
+    </LinearLayout>
+
+    <TextView
+        android:textSize="8dp"
+        android:id="@+id/tvmore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="多选框" />
+
+    <GridView
+        android:id="@+id/gvmore"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:horizontalSpacing="5dp"
+        android:numColumns="2"></GridView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/bt2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="选中" />
+
+        <Button
+            android:id="@+id/bt22"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="重置" />
+    </LinearLayout>
+</LinearLayout>

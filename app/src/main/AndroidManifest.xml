@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sinoyd.frameapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 抖动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 系统启动完成广播接收器 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- wifi manager -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name=".KotlinFrame.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".KotlinFrame.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".KotlinFrame.UI.BarChartActivity" />
+        <activity android:name=".KotlinFrame.UI.SingleMoreActivity" />
+        <activity android:name=".KotlinFrame.UI.TwodimensionallistActivity" />
+        <activity android:name=".KotlinFrame.UI.SelectionbarActivity" />
+        <activity android:name=".KotlinFrame.UI.TimeSelectionBarActivity" />
+        <activity android:name=".KotlinFrame.UI.TimeselectiondialogActivity" />
+        <activity android:name=".KotlinFrame.UI.ImitateIOSActivity" />
+        <activity android:name=".KotlinFrame.UI.TimeDialogdemoActivity" />
+        <activity android:name=".KotlinFrame.UI.NetworkActivity" />
+        <activity android:name=".KotlinFrame.UI.InfoActivity" />
+        <activity android:name=".KotlinFrame.UI.TouchActivity" />
+        <activity android:name=".KotlinFrame.UI.PhotoActivity" />
+
+        <!-- 相机 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/mis_provider_paths" />
+        </provider>
+
+        <!-- 监听网络变化广播 -->
+        <receiver
+            android:name=".KotlinFrame.BroadcastReceive.NetworkChangedReceiver"
+            android:permission="com.example.broadcast.permission">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 闹铃广播 -->
+        <receiver
+            android:name=".KotlinFrame.BroadcastReceive.AlarmReceiver"
+            android:process=":remote" />
+
+        <!-- 开机广播 -->
+        <receiver android:name=".KotlinFrame.BroadcastReceive.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 关机广播 -->
+        <receiver android:name=".KotlinFrame.BroadcastReceive.ShutdownReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 看门狗 -->
+        <service android:name=".KotlinFrame.Service.WatchDogService" />
+
+        <!-- 启动表情界面到广播 -->
+        <receiver android:name=".KotlinFrame.BroadcastReceive.StartExpressionReceiver">
+            <intent-filter>
+                <action android:name="com.start.expression" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".KotlinFrame.UI.AlarmActivity" />
+        <activity android:name=".KotlinFrame.UI.WatchDogActivity" />
+        <activity android:name=".KotlinFrame.UI.GenerateErActivity" />
+        <activity android:name=".KotlinFrame.UI.MINAActivity" />
+        <activity android:name=".KotlinFrame.UI.Mina2Activity"></activity>
+    </application>
+
+</manifest>

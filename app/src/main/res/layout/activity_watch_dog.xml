@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".KotlinFrame.UI.WatchDogActivity">
+
+
+    <Button
+        android:id="@+id/tv_watchdog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="呼叫看门狗" />
+
+
+    <Button
+        android:id="@+id/tv_watchdog_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="喂狗" />
+
+    <Button
+        android:id="@+id/tv_watchdog_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关闭看门狗" />
+
+</LinearLayout>
