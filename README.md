@@ -19,16 +19,16 @@
 
 1. #### 第一步
 
-2. 	allprojects {
+allprojects {
    		repositories {
    			...
    			maven { url 'https://www.jitpack.io' }
    		}
    	}
 
-3. #### 第二步
+2. #### 第二步
 
-4. 	dependencies {
+dependencies {
    	        implementation 'com.github.icescj:kotlin_framework:0.0.1'
    	}
    
