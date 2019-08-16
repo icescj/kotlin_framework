@@ -24,13 +24,13 @@ allprojects {
    			...
    			maven { url 'https://www.jitpack.io' }
    		}
-   	}
+}
 ```
 2. #### 第二步
 ```
 dependencies {
    	        implementation 'com.github.icescj:kotlin_framework:0.0.1'
-   	}
+}
 ``` 
 
 #### 参与贡献
